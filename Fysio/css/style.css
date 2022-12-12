@@ -319,7 +319,6 @@ footer .logo > span {
   justify-content: center;
   align-items: center;
   padding-bottom: 4rem;
-  padding-right: 2rem;
 }
 
 .contact-heading h2 {
@@ -666,7 +665,6 @@ form button {
   }
 }
 
-
 /* Behandlinger */
 * {
   box-sizing: border-box;
@@ -729,7 +727,7 @@ form button {
   cursor: pointer;
   background-color: #fff;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
-  color: #252B42;
+  color: #252b42;
   font-size: 1.5em;
   text-align: center;
   transition: all 0.2s ease-in-out;
@@ -755,10 +753,9 @@ form button {
   display: block;
   justify-content: center;
   align-items: center;
-  color: #252B42;
+  color: #252b42;
   background-color: #fff;
   font-size: 1.5em;
-  
 }
 
 .card__expander-text {
@@ -834,15 +831,15 @@ form button {
 }
 
 @media screen and (min-width: 992px) {
-  .card:nth-of-type(2n+2) .card__expander {
+  .card:nth-of-type(2n + 2) .card__expander {
     margin-left: calc(-200% - 30px);
   }
 
-  .card:nth-of-type(2n+2) .card__expander {
+  .card:nth-of-type(2n + 2) .card__expander {
     margin-left: calc(-100% - 30px);
   }
 
-  .card:nth-of-type(2n+4) {
+  .card:nth-of-type(2n + 4) {
     clear: left;
   }
 
@@ -851,11 +848,11 @@ form button {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  .card:nth-of-type(2n+2) .card__expander {
+  .card:nth-of-type(2n + 2) .card__expander {
     margin-left: calc(-100% - 30px);
   }
 
-  .card:nth-of-type(2n+3) {
+  .card:nth-of-type(2n + 3) {
     clear: left;
   }
 
