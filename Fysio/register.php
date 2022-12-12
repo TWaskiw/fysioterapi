@@ -1,13 +1,8 @@
 <?php 
     include("mysql.php");
     session_start();
-<<<<<<< HEAD
     include_once 'header.php';
     if(isset($_SESSION['id'])) {
-=======
-    
-  /*   if(isset($_SESSION['id'])) {
->>>>>>> f09419815501aa1022e4c44bcc9832bbedb849af
     header('location: welcome.php?status=loggedin');
     exit; 
     }
@@ -64,8 +59,8 @@
                             if ($_GET["error"] == "emptyField") {
                                 echo "<p class='register-error'>Udfyld alle felter </p>";
                             }
-                            else if ($_GET["error"] == "userTaken") {
-                                echo "<p class='register-error'>Beklemailr, brugernavn er allerede temailt </p>";
+                            else if ($_GET["error"] == "numberTaken") {
+                                echo "<p class='register-error'>En bruger med dette telefonnummer findes allerede</p>";
                             } 
                             else if ($_GET["error"] == "wrongPassword") {
                                 echo "<p class='register-error'>Kodeord stemmer ikke overens </p>";

@@ -3,13 +3,11 @@
     
     session_start();
     include_once 'header.php';
-/*
     if (isset($_SESSION['id'])) {
-        header('location: welcome.php');
-    } */
+        header('location: index.php');
+    } 
 ?>
 
-<!-- login form -->    
 <section class="signup-form">
     <div class="signup-form-form">
 
@@ -40,7 +38,6 @@
                 }
             } 
 ?>
-         
      </form>
     </div>
 </section>

@@ -34,8 +34,8 @@
         }
         
         if (mysqli_num_rows($res_user) > 0 ) {
-            $_SESSION['mobilenumber'] = "";
-            header('location: register.php?error=userTaken');
+            $_SESSION['number'] = "";
+            header('location: register.php?error=numberTaken');
             exit();
         }
         

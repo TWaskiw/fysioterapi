@@ -1,6 +1,6 @@
- <?php /*
+ <?php 
 session_start();
-    include("mysql.php"); */
+    include("mysql.php");
     include_once 'header.php'; 
 ?> 
 

@@ -11,14 +11,22 @@
 <body>
 <nav class="navbar">
     <div class="nav-logo">
-        <h1><span class="logo-span">Mark</span>Skals</h1></div>
+        <h1 href="index.php"><span class="logo-span">Mark</span>Skals</h1></div>
         <div>
         <ul class="nav-links">
           <li>Om mig</li>
           <li>Behandling</li>
           <li>Kontakt</li>
+          <li>Log ud</li>
         </ul>
         </div>
-        <div class="nav-button"><href class="log-ind">Login</href><button class="default-button">Bestil tid        <i class="fa-solid fa-arrow-right"></i></button></div>
+        <?php 
+            if(isset($_SESSION['id'])) {
+              echo "<div class='nav-button'><a href='profil.php' class='log-ind'>Min side</a><button class='default-button'>Bestil tid        <i class='fa-solid fa-arrow-right'></i></button></div>";
+              echo "<li><a href='logout.php'>Log ud</a></li>'";
+            } else {
+                echo "<div class='nav-button'><a href='login.php' class='log-ind'>Login</a><button class='default-button'>Bestil tid        <i class='fa-solid fa-arrow-right'></i></button></div>";
+            }
+            ?>
       </nav>
 
