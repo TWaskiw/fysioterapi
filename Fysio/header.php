@@ -19,6 +19,6 @@
           <li>Kontakt</li>
         </ul>
         </div>
-        <div class="nav-button"><href class="log-ind">Login</href><button>Bestil tid        <i class="fa-solid fa-arrow-right"></i></button></div>
+        <div class="nav-button"><href class="log-ind">Login</href><button class="default-button">Bestil tid        <i class="fa-solid fa-arrow-right"></i></button></div>
       </nav>
 
