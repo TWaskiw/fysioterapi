@@ -133,6 +133,56 @@ body {
 .fcontainer > h1 > span {
   color: #8c94b8;
 }
+/* Register */
+.opreth2 {
+  font-size: 30px;
+  text-align: center;
+}
+.form-form-register {
+  width: 100%;
+    background-color: #E9F5FF;
+    height: 600px;
+    padding-top: 20%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0px 0px 180px 180px / 0px 0px 15px 15px;
+}
+.form-flex {
+  background-color: white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 15%;
+    align-items: center;
+    margin-left: -15%;
+
+    box-shadow: 4px 10px 8px 0px rgba(0,0,0,0.29);
+-webkit-box-shadow: 4px 10px 8px 0px rgba(0,0,0,0.29);
+-moz-box-shadow: 4px 10px 8px 0px rgba(0,0,0,0.29);
+}
+.selectGender{
+  width: 96%;
+  height: 46px;
+  margin-bottom: 20px;
+  border: 1px solid #e1e1e1;
+}
+.alleredeTilmeldtP {
+  display: flex;
+}
+
+.alleredeTilmeldt2 {
+  color: #2091F9;
+  text-decoration: underline;
+  padding-left: 1%;
+}
+
+.whiteBGBox {
+  background: white;
+  width: 100%;
+  height: 300px;
+}
 
 /* Footer */
 footer {
@@ -405,8 +455,13 @@ form textarea {
 }
 
 form button {
-  width: 100%;
+  width: 96%;
   cursor: pointer;
+    background-color: #2091F9;
+    border-radius: 4px;
+    padding: 2%;
+    border: 1px transparent;
+    color: white;
 }
 
 .site-btn {
