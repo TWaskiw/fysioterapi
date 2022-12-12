@@ -25,7 +25,7 @@
         $_SESSION['email'] = $_POST['email'];}
 
 
-        $sql_user = "SELECT * FROM userPass WHERE mobilenumber='$number'";
+        $sql_user = "SELECT * FROM userPass WHERE number='$number'";
         $res_user = mysqli_query($mySQL, $sql_user) or die(mysqli_error($mySQL));
 
         if(empty($firstname) || empty($lastname) || empty($number) || empty($email) || empty($gender) || empty($password)){
@@ -45,24 +45,24 @@
         }
 
          else {
-            $newUser = "INSERT INTO user (firstname, lastname, number, email, gender)
+            $newUser = "INSERT INTO userTable (firstname, lastname, number, email, gender)
             VALUES ('$firstname','$lastname','$number','$email','$gender')";
             $mySQLfind = $mySQL->query($newUser);
 
-            $findUser = "SELECT id FROM user ORDER BY id DESC LIMIT 1";
+            $findUser = "SELECT id FROM userTable ORDER BY id DESC LIMIT 1";
             $response = $mySQL->query($findUser);
             $data = $response->fetch_object();
             
             $passwordHash = password_hash($_POST["password"], PASSWORD_DEFAULT);
-            $signupPass = "INSERT INTO userPass (id, mobilenumber, password) 
-            VALUES ('$data->id','$mobilenumber', '$passwordHash')";
+            $signupPass = "INSERT INTO userPass (id, number, password) 
+            VALUES ('$data->id','$number', '$passwordHash')";
             $response = $mySQL->query($signupPass);
 
             unset($_SESSION['firstname']);
             unset($_SESSION['lastname']);
             unset($_SESSION['number']);
             unset($_SESSION['email']);
-            unset($_SESSION['mobilenumber']);
+            unset($_SESSION['number']);
 
             header('location: register.php?error=none');
             }
