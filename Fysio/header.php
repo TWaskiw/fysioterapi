@@ -17,7 +17,6 @@
           <li>Om mig</li>
           <li>Behandling</li>
           <li>Kontakt</li>
-          <li>Log ud</li>
         </ul>
         </div>
         <?php 

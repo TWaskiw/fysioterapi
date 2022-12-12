@@ -36,9 +36,10 @@ dig i</h2>
 </div>
 
 <?php
+  include_once 'behandlinger.php';
   include_once 'contact.php';
   include_once 'testimonials.php'; 
-    include_once 'footer.php'; 
+  include_once 'footer.php'; 
 ?>
 
 
