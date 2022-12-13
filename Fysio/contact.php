@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Fysioterapi</title>
-    <script src="https://kit.fontawesome.com/491b6e8995.js" crossorigin="anonymous"></script>
-</head>
-
 <body>
-
 <section class="contact">
     <div class="contact-heading">
         <h2>Kontakt</h2>
@@ -56,10 +44,10 @@
 
             <div class="contact-column">
                 <div class="contact-form">
-                    <form action="#">
-                        <input type="text" placeholder="Navn"/>
-                        <input type="email" placeholder="Email"/>
-                        <textarea placeholder="Kommentar"></textarea>
+                    <form method="post" action="contact-send.php">
+                        <input type="text" name="name" placeholder="Navn"/>
+                        <input type="email" name="email" placeholder="Email"/>
+                        <textarea placeholder="Kommentar" name="message"></textarea>
                         <button type="submit" class="site-btn">Send besked</button>
                     </form>
                 </div>

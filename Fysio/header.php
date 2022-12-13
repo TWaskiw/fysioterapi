@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Fysioterapi</title>
     <script src="https://kit.fontawesome.com/491b6e8995.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </head>
 <body>
-<nav class="navbar">
+<nav  class="navbar ">
     <div class="nav-logo">
         <h1 href="index.php"><span class="logo-span">Mark</span>Skals</h1></div>
         <div>
@@ -17,7 +18,6 @@
           <li>Om mig</li>
           <li>Behandling</li>
           <li>Kontakt</li>
-          <li>Log ud</li>
         </ul>
         </div>
         <?php 
