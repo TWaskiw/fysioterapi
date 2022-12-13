@@ -9,16 +9,13 @@ session_start();
 <main class="hero-section">
   <section class="container">
     <div class="hero-content">
-
     <div class="hero-text">
-        <h2 class="hero-welcome-text">Fysioterapi med 
-dig i</h2>
+        <h2 class="hero-welcome-text">Fysioterapi med dig i</h2>
         <h1 class="hero-big">FOKUS</h1>
         <p class="hero-text-description">Jeg har over 5 års erfaring  med alt fra småskader, sportsskader massage og meget mere.</p>
         <button class="default-button">Læs mere <i class="fa-solid fa-arrow-right"></i></button>
       </div>
     </div>
-
   </section>
 </main>
 

@@ -15,17 +15,18 @@
      <form class="form-login" action="login-backend.php" method="post">
 
         <label for="number">Telefonnr.</label>
-        <input type="text" name="number" placeholder="  Brugernavn...">
+        <input type="text" name="number" placeholder="Brugernavn...">
 
         <label for="password">Adgangskode</label>
-        <input type="password" name="password" placeholder="    Adgangskode...">
+        <input type="password" name="password" placeholder="Adgangskode...">
 
         <button type="submit" name="submit">Login</button>
         <div class="opret-bruger"> <p>Ikke oprettet endnu?</p><a href="register.php">Opret bruger</a></div> 
+        <!-- Hvis login-processen ikke går igennem, returnerer backenden med en givet fejl - med dem vil vi herunder give brugeren besked om, hvor fejlen skete. -->
         <?php
             if (isset($_GET["error"])) {
                 if ($_GET["error"] == "emptyField") {
-                    echo "<p style='text-align:center; color: red;'>Udfyld alle felter </p>";
+                    echo "<p style='text-align:center; color: red;'>Alle felter skal udfyldes</p>";
                 }
                 else if ($_GET["error"] == "wrongLogin") {
                     echo "<p style='text-align:center; color: red;'>Forkert login, prøv igen </p>";
@@ -37,7 +38,7 @@
                     echo "<p style='text-align:center; color: red;'>Ingen bruger fundet </p>";
                 }
             } 
-?>
+        ?>
      </form>
     
     </div>

@@ -20,6 +20,9 @@
     <form class="form-register" action="register-backend.php" name="register" method="post">
         <div class="form-flex">
             <div class="register-info">
+                <!-- Hvert input-felt er lavet, så der sættes en session i gang når brugeren prøver at oprette en bruger (trykker submit). Hvis der skulle opstå fejl og brugeren skal prøve igen, vil hvert
+            input-felt blive udfyldt med SESSION's værdi, altså det brugeren indtastede ved sit første forsøg. Det gør at brugeren ikke bliver frustreret over at skulle udfylde alt igen og igen,
+            personen har problemer med at registrer sig. -->
                 <label for="firstname">Fornavn</label>
                 <input type="text" name="firstname" <?php if(isset($_SESSION['firstname'])!=""){ 
                     echo " value='".$_SESSION['firstname']."'"; }?>
@@ -44,6 +47,7 @@
                 </select><br>
             </div>
             <div class="register-login">
+                <!-- SESSION's funktionen har vi dog ikke sat på kodeord's felterne - da vi dermed sikre brugeren altid har styr på hvilken adgangskode der er skrevet i felterne. -->
                     <label for="password">Kodeord</label>
                     <input type="password" name="password"><br>
 
@@ -53,7 +57,8 @@
                     <div class="alleredeTilmeldtP">
                     <p>Allerede tilmeldt?</p> 
                     <p class="alleredeTilmeldt2"><a href="login.php">Login her</a></p>  
-                    </div>                  
+                    </div>     
+                    <!-- Herunder har vi vores fejl-håndteringer. Ved at kigge på hvilke værdier der bliver sendt tilbage i URL'en med POST, giver vi en fejlmeddelse afhængig af den. -->             
                     <?php 
                         if (isset($_GET["error"])) {
                             if ($_GET["error"] == "emptyField") {

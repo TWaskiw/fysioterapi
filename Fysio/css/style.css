@@ -35,6 +35,7 @@ body {
   display: flex;
   align-items: center;
   gap: 40px;
+  padding-inline-start: 0;
 }
 
 .navbar .nav-links li {
@@ -50,8 +51,9 @@ body {
 }
 
 .nav-logo {
-  margin-left: 5%;
+  padding-left: 5%;
   color: #ffffff;
+  width: 25vw;
 }
 
 .logo-span {
@@ -59,7 +61,11 @@ body {
 }
 
 .nav-button {
-  margin-right: 5%;
+  width: 25vw;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5%;
+  align-items: center;
 }
 
 .hero-text {
@@ -76,6 +82,10 @@ body {
   font-size: 34px;
   margin-bottom: -10px;
   color: #000000;
+}
+
+.today {
+  color: red;
 }
 
 .hero-big {
@@ -198,11 +208,11 @@ body {
 
 .login-form-form {
   background-color: white;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    padding: 10%;
-    align-items: center;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+  align-items: center;
   box-shadow: 4px 10px 8px 0px rgba(0, 0, 0, 0.29);
   -webkit-box-shadow: 4px 10px 8px 0px rgba(0, 0, 0, 0.29);
   -moz-box-shadow: 4px 10px 8px 0px rgba(0, 0, 0, 0.29);
@@ -210,7 +220,6 @@ body {
 .opret-bruger {
   display: flex;
   align-items: center;
-
 }
 .opret-bruger p {
   padding-right: 1%;
