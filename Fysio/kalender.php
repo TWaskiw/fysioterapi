@@ -67,9 +67,9 @@ function kalender($month, $year) {
 
         // Vi printer enten dagens dato eller en normal celle.
         if($dateToday==$date){
-            $kalender.= "<td class='today'><h4>$currentDay</h4>";
+            $kalender.= "<td><a class='today' href='booking-backend.php?date=$date'>$currentDay</a></td>";
         } else {
-            $kalender.= "<td><h4>$currentDay</h4>";
+            $kalender.= "<td><a class='nottoday' href='booking-backend.php?date=$date'>$currentDay</a></td>";
         }
 
         $kalender.= "</td>";
