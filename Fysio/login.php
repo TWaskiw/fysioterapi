@@ -8,11 +8,11 @@
     } 
 ?>
 
-<section class="signup-form">
-    <div class="signup-form-form">
-
+<div class="login-form">
+<h2>Login</h2>
+    <div class="login-form-form">
+    
      <form class="form-login" action="login-backend.php" method="post">
-     <h2>Login</h2>
 
         <label for="number">Telefonnr.</label>
         <input type="text" name="number" placeholder="  Brugernavn...">
@@ -21,7 +21,7 @@
         <input type="password" name="password" placeholder="    Adgangskode...">
 
         <button type="submit" name="submit">Login</button>
-        <div class="opret-bruger"><a href="register.php">Opret bruger</a></div> 
+        <div class="opret-bruger"> <p>Ikke oprettet endnu?</p><a href="register.php">Opret bruger</a></div> 
         <?php
             if (isset($_GET["error"])) {
                 if ($_GET["error"] == "emptyField") {
@@ -39,8 +39,10 @@
             } 
 ?>
      </form>
+    
     </div>
-</section>
+ </div>
+ <div class="whiteBGBox"></div>
 <?php
  include_once 'footer.php';
 ?>

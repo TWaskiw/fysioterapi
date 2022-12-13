@@ -157,7 +157,6 @@ body {
   padding: 15%;
   align-items: center;
   margin-left: -15%;
-
   box-shadow: 4px 10px 8px 0px rgba(0, 0, 0, 0.29);
   -webkit-box-shadow: 4px 10px 8px 0px rgba(0, 0, 0, 0.29);
   -moz-box-shadow: 4px 10px 8px 0px rgba(0, 0, 0, 0.29);
@@ -182,6 +181,39 @@ body {
   background: white;
   width: 100%;
   height: 300px;
+}
+
+/* Login */
+.login-form {
+  width: 100%;
+  background-color: #e9f5ff;
+  height: 400px;
+  padding-top: 20%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0px 0px 180px 180px / 0px 0px 15px 15px;
+}
+
+.login-form-form {
+  background-color: white;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    padding: 10%;
+    align-items: center;
+  box-shadow: 4px 10px 8px 0px rgba(0, 0, 0, 0.29);
+  -webkit-box-shadow: 4px 10px 8px 0px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 4px 10px 8px 0px rgba(0, 0, 0, 0.29);
+}
+.opret-bruger {
+  display: flex;
+  align-items: center;¨
+
+}
+.opret-bruger p {
+  padding-right: 1%;
 }
 
 /* Footer */
@@ -453,7 +485,7 @@ form textarea {
 }
 
 form button {
-  width: 96%;
+  width: 100%;
   cursor: pointer;
   background-color: #2091f9;
   border-radius: 4px;

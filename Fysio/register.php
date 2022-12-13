@@ -52,7 +52,7 @@
                     <button type="submit" name="submit">Tilmeld</button>
                     <div class="alleredeTilmeldtP">
                     <p>Allerede tilmeldt?</p> 
-                    <p class="alleredeTilmeldt2">Login her</p>  
+                    <p class="alleredeTilmeldt2"><a href="login.php">Login her</a></p>  
                     </div>                  
                     <?php 
                         if (isset($_GET["error"])) {
