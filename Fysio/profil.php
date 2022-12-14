@@ -3,7 +3,7 @@
     
     session_start();
     include_once 'header.php';
-    if (isset($_SESSION['id'])) {
+    if (!isset($_SESSION['number'])) {
         header('location: index.php');
     } 
 ?>
@@ -17,7 +17,7 @@
                     <li>Tlf: +45 88888888</li>
                     <li>Email: Email@gmail.com</li>
                 </ul>
-                <p class="redOp">Rediger oplysninger</p>
+                <p class="redOp"><a href="bruger-opdater.php">Rediger oplysninger</a></p>
         </div>
         
         <h3>Mine Aftaler</h3>
