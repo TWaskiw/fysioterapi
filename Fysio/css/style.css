@@ -1291,6 +1291,7 @@ form button {
 
 h2 {
   text-align: center;
+  margin-top: 5vh;
 }
 
 .valgtDato {
@@ -1317,10 +1318,15 @@ tbody > tr > td {
   text-align: center;
   font-size: large;
   margin: 100px 100px;
+  border-radius: 5px;
 }
 
-tbody > tr > td:hover {
-  background-color: #186bb9;
+.nottoday:hover {
+  color: #186bb9;
+}
+
+.today:hover {
+  color: #186bb9;
 }
 
 .kalender {
