@@ -2,6 +2,8 @@ body {
   font-family: "Montserrat", sans-serif;
   padding: 0;
   margin: 0;
+  background-color: #fff;
+  box-sizing: border-box;
 }
 
 /* Booking side */
@@ -354,23 +356,25 @@ footer .logo > span {
 
 /* Kontakt */
 .contact {
-  padding-top: 2rem;
   padding-bottom: 2rem;
+  background-color: #fafafa;
+  margin: 0 auto;
 }
 
 .contact-heading {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 4rem;
+  padding: 3rem;
 }
 
 .contact-heading h2 {
   color: #252b42;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 2px;
   position: relative;
+  text-transform: uppercase;
 }
 
 .contact-heading h2::before {
@@ -555,9 +559,6 @@ form button {
   }
 }
 @media (max-width: 500px) {
-  .contact-heading {
-    padding-right: 0;
-  }
   .contact-heading h2 {
     font-size: 22px;
   }
@@ -574,7 +575,7 @@ form button {
 /*-----Testimonial-------*/
 .testimonials {
   height: 350px;
-  background-color: #f9f9f9;
+  background-color: #fff;
   color: #252b42;
   line-height: 1.5;
 }
@@ -714,29 +715,13 @@ form button {
   box-sizing: border-box;
 }
 
-.header-behandlinger {
-  text-align: center;
-  margin: 0;
-}
-
-.header-behandlinger > p {
-  font-size: 16px;
-  margin: 0;
-}
-
-.header-behandlinger > h2 {
-  font-size: 28px;
-  margin: 10px;
-}
-
 .behandlinger {
   background-color: #fafafa;
-  padding: 20px;
 }
 
 .wrapper {
-  margin: 5em auto;
-  max-width: 800px;
+  margin: 0 auto;
+  max-width: 1230px;
   background-color: #fafafa;
 }
 
@@ -915,17 +900,14 @@ form button {
   -webkit-justify-content: center;
   align-items: center;
   -webkit-align-items: center;
-}
-
-body {
-  background-color: #eaeaea;
+  margin-bottom: 2rem;
 }
 
 .carousel {
   width: 100%;
   height: 100%;
   display: flex;
-  max-width: 900px;
+  max-width: 1170px;
   max-height: 550px;
   overflow: hidden;
   position: relative;
