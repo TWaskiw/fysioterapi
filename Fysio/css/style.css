@@ -1273,3 +1273,107 @@ form button {
     width: 100%;
   }
 }
+
+
+/* STYLING KALENDER */
+.bestilling-form,
+.kalender,
+.ledigetider {
+  width: 50%;
+  align-items: center;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+.valgtDato {
+  width: 100%;
+  text-align: center;
+  color: #186bb9;
+}
+
+.table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+tbody {
+  margin: 5vh 0 5vh 0;
+}
+
+tbody > tr {
+  width: 100%;
+}
+
+tbody > tr > td {
+  text-align: center;
+  font-size: large;
+  margin: 100px 100px;
+}
+
+tbody > tr > td:hover {
+  background-color: #186bb9;
+}
+
+.kalender {
+  margin-top: 5vh;
+  background: #ffffff;
+  box-shadow: 0px 30px 84px rgba(19, 10, 46, 0.08),
+    0px 8px 32px rgba(19, 10, 46, 0.07), 0px 3px 14px rgba(19, 10, 46, 0.03),
+    0px 1px 3px rgba(19, 10, 46, 0.13);
+  border-radius: 5px;
+}
+
+.daypassed {
+  color: grey;
+  margin: 25px;
+}
+
+.today {
+  color: #2091f9;
+}
+
+.ledigetider {
+  width: 50%;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  background: #ffffff;
+  box-shadow: 0px 30px 95px rgba(19, 10, 46, 0.08),
+    0px 8px 32px rgba(19, 10, 46, 0.07), 0px 3px 14px rgba(19, 10, 46, 0.03),
+    0px 1px 3px rgba(19, 10, 46, 0.13);
+  border-radius: 5px;
+}
+
+.ledigtid {
+  background: #2091f9;
+  border-radius: 10px;
+  padding: 8px 12px;
+  margin: 24px 12px;
+  color: white;
+}
+
+.kalender,
+.ledigetider {
+  margin-bottom: 5vh;
+}
+
+.form-bestilling input {
+  width: 100%;
+  border: 0;
+  background: #ffffff;
+  box-shadow: 0px 30px 95px rgba(19, 10, 46, 0.08),
+    0px 8px 32px rgba(19, 10, 46, 0.07), 0px 3px 14px rgba(19, 10, 46, 0.03),
+    0px 1px 3px rgba(19, 10, 46, 0.13);
+}
+
+@media all and (max-width: 700px) {
+  .kalender {
+    width: 100%;
+    align-self: center;
+  }
+}
+
