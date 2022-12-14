@@ -38,7 +38,7 @@ body {
 
 nav {
   background: #252b42;
-  position: fixed;
+  position: static;
   width: 100%;
   z-index: 99;
 }
