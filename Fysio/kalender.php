@@ -26,7 +26,7 @@ function kalender($month, $year) {
     $dateToday = date('Y-m-d');
 
 
-    $kalender = "<table class='table'>";
+    $kalender = "<div class='kalender'><table class='table'>";
     $kalender.="<h2>$monthName $year</h2>";
     $kalender.= "<a href='?month=".date('m', mktime(0, 0, 0, $month-1, 1, $year))."&year=".date('Y', mktime(0, 0, 0, $month-1, 1, $year))."'>Sidste måned</a>";
     $kalender.= "<a href='?month=".date('m', mktime(0, 0, 0, $month+1, 1, $year))."&year=".date('Y', mktime(0, 0, 0, $month+1, 1, $year))."'>Næste måned</a>";
@@ -43,7 +43,7 @@ function kalender($month, $year) {
 
     
     for($k=0;$k<$dayOfWeek;$k++){
-        $kalender.="<td></td>";
+        $kalender.="<td></td></div>";
     }
 
 /*     if($dayOfWeek > 0) {
@@ -86,7 +86,7 @@ function kalender($month, $year) {
         }
     }
 
-    $kalender.="</tr></table>";
+    $kalender.="</tr></table></div>";
 
     echo $kalender;
 }
@@ -153,19 +153,21 @@ if (mysqli_num_rows($res_booking) > 0 ) {
 
 
 ?>
+<div class="bestilling-form">
 <form class="form-bestilling" action="booking-backend.php" name="booking" method="post">
                 <label for="name">Navn</label>
-                <input type="text" name="name" <?php if(isset($_SESSION['firstname'])!=""){ 
+                <input type="text" name="name" required <?php if(isset($_SESSION['firstname'])!=""){ 
                     echo " value='".$_SESSION['firstname']."'"; }?>
                 ><br>
 
                 <label for="email">Email</label>
-                <input type="text" name="email" <?php if(isset($_SESSION['email'])!=""){ 
+                <input type="text" name="email" required <?php if(isset($_SESSION['email'])!=""){ 
                     echo " value='".$_SESSION['email']."'"; }?>><br>
 
                 <label for="number">Telefon nummer</label>
-                <input type="number" name="number" <?php if(isset($_SESSION['number'])!=""){ 
+                <input type="number" name="number" required <?php if(isset($_SESSION['number'])!=""){ 
                     echo " value='".$_SESSION['number']."'"; }?>><br>
-  <input type="submit" value="Submit">
+  <input type="submit" value="Bekræft bestilling">
 </form> 
+</div>
 

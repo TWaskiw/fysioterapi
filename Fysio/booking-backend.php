@@ -3,6 +3,7 @@
 include("mysql.php");
 session_start();
 
+    // Her tager vi de indtastede input-værdier ved at bruge $_REQUEST og sætter det lig med variabelen vi skal bruge i koden.
 $dato = $_SESSION['dato'];
 $tid = $_SESSION['tid'];
 $name = $_REQUEST["name"];
@@ -14,50 +15,46 @@ echo $tid;
 echo $name;
 echo $email;
 echo $number;
-/* 
-if(isset($_POST['submit'])) {
 
-        // Her tager vi alle indtastede input-værdier vha. $_REQUEST og sætter det lig med en variabel vi vil bruge i koden.
-        $firstname = $_REQUEST["name"];
-        $email = $_REQUEST["email"];
-        $number = $_REQUEST["number"];
-
-        echo $firstname;
-
-    } */
+$dato = $_SESSION['dato'];
+$tid = $_SESSION['tid'];
+$name = $_REQUEST["name"];
+$email = $_REQUEST["email"];
+$number = $_REQUEST["number"];
 
 
+// Inden vi godkender bestillingen, går vi ind og tjekker igen om tiden allerede er bestilt. En sikkerhedsforanstaltning HVIS en anden bruger, skulle have bokket et par sekunder før f.eks.
+$sql_time = "SELECT * FROM bookingsList WHERE dato='$dato' AND timeslot='$tid'";
+$res_user = mysqli_query($mySQL, $sql_time) or die(mysqli_error($mySQL));
 
-/* 
-if(isset($_REQUEST["date"])){
-    $dato = $_REQUEST["date"];
+
+// Vi begynder at kigge den indtastede information igennem, for at sikre brugeren ikke har begået fejl - og vi undgår fejl i databasen.
+   // Først tjekker vi om alle felter er tomme
+   if(empty($dato) || empty($tid) || empty($name) || empty($email) || empty($number)){
+    header('location: kalender.php?error=emptyField');
+    exit();
+}
+
+// Så tjekker vi om der var nogen brugere allerede registreret med dette telefonnummer - hvis der ingen er, kører koden videre.
+if (mysqli_num_rows($res_user) > 0 ) {
+    header('location: kalender.php?error=numberTaken');
+    exit();
 }
 
 
-$sql_booking = "SELECT * FROM bookings WHERE dato='$dato'";
-$res_booking = mysqli_query($mySQL, $sql_booking) or die(mysqli_error($mySQL));
+// Nu har vi tjekket for de fejl vi ville, og hvis der ingen fejl er - opretter vi dem i databasen.
+ else {
+    // Vi bruger SQL statement INSERT til at indsætte brugeren indtastede VALUES i databasen (table userTable)
+    $sql = "INSERT INTO bookingsList (dato, timeslot, phonenumber)
+    VALUES ('$dato', '$tid', '$number')";
 
-if (mysqli_num_rows($res_booking) > 0 ) {
- echo "der er mindst én booking denne dato";
- while($row = $res_booking->fetch_assoc()) {
-    if($row["timeslot1"] == "1"){
-        $_SESSION['timeslot1'] = "not available";
-    }
-
+if ($mySQL->query($sql) === TRUE) {
+    header('location: index.php?booking=success');
+    unset($_SESSION['name']);
+    unset($_SESSION['dato']);
+    unset($_SESSION['tid']);
+    unset($_SESSION['email']);
+  } else {
+    echo "Error: " . $sql . "<br>" . $mySQL->error;
   }
-} else {
-    echo "Alle ledige";
-
-
-
-} */
-
-/*  else {
-    $newUserInfo = "INSERT INTO bookingList (dato, timeslot, phonenumber)
-    VALUES ('$firstname','$lastname','$height')";
-    
-    } */
-
-
-
-?>
+ }
