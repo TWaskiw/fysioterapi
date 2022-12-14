@@ -15,9 +15,12 @@
     <?php
     include_once 'header.php';
     ?>
+
     <div class="form-form-register">
-    <h2 class="opreth2">Opret bruger</h2>
     <form class="form-register" action="register-backend.php" name="register" method="post">
+    <div class="contact-heading">
+        <h2>Registrer bruger</h2>
+    </div>
         <div class="form-flex">
             <div class="register-info">
                 <!-- Hvert input-felt er lavet, så der sættes en session i gang når brugeren prøver at oprette en bruger (trykker submit). Hvis der skulle opstå fejl og brugeren skal prøve igen, vil hvert
@@ -53,7 +56,7 @@
 
                     <label for="passwordRepeat">Gentag kodeord</label>
                     <input type="password" name="passwordRepeat"><br>
-                    <button type="submit" name="submit">Tilmeld</button>
+                    <button class="default-button" type="submit" name="submit">Tilmeld</button>
                     <div class="alleredeTilmeldtP">
                     <p>Allerede tilmeldt?</p> 
                     <p class="alleredeTilmeldt2"><a href="login.php">Login her</a></p>  
@@ -79,7 +82,6 @@
         </div>
     </div>
 </form>
-<div class="whiteBGBox"></div>
 <?php  
 include_once 'footer.php';
 ?>

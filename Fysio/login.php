@@ -9,7 +9,10 @@
 ?>
 
 <div class="login-form">
-<h2>Login</h2>
+<div class="contact-heading">
+        <h2>Log ind</h2>
+</div>
+
     <div class="login-form-form">
     
      <form class="form-login" action="login-backend.php" method="post">
@@ -20,7 +23,7 @@
         <label for="password">Adgangskode</label>
         <input type="password" name="password" placeholder="Adgangskode...">
 
-        <button type="submit" name="submit">Login</button>
+        <button class="default-button" type="submit" name="submit">Login</button>
         <div class="opret-bruger"> <p>Ikke oprettet endnu?</p><a href="register.php">Opret bruger</a></div> 
         <!-- Hvis login-processen ikke går igennem, returnerer backenden med en givet fejl - med dem vil vi herunder give brugeren besked om, hvor fejlen skete. -->
         <?php
@@ -43,7 +46,6 @@
     
     </div>
  </div>
- <div class="whiteBGBox"></div>
 <?php
  include_once 'footer.php';
 ?>
