@@ -16,6 +16,11 @@
 </head>
 
 <body>
+
+<div class="contact-heading">
+        <h2>Om mig</h2>
+</div>
+
 <section class="om-mig">
 <div class="carousel">
   <div class="carousel__nav">
