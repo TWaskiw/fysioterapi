@@ -111,7 +111,8 @@ $year =  $dateComponents['year'];
 if(isset($_REQUEST["date"])){
     $_SESSION['dato'] = $_REQUEST["date"];
 $dato = $_SESSION['dato'];
-echo $dato;
+echo "<p class='valgtDato'>Du har valgt $dato</p>";
+
 
 if($dato < date('Y-m-d')) {
     header('location: kalender.php?error=ugyldigDato');
