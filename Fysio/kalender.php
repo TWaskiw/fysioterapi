@@ -103,50 +103,69 @@ $year =  $dateComponents['year'];
 
 
 <?php 
-// Næste skridt er at brugeren skal vælge et bestemt tidspunkt at booke på den valgte dag.
-$timeslot1 = "09:00";
-$timeslot2 = "11:00";
-$timeslot3 = "13:00";
-
-$timeslot1_booked = false;
-$timeslot2_booked = false;
-$timeslot3_booked = false;
-
 if(isset($_REQUEST["date"])){
     $_SESSION['dato'] = $_REQUEST["date"];
 $dato = $_SESSION['dato'];
 echo $dato;
 
-$sql_booking = "SELECT * FROM bookings WHERE dato='$dato'";
+// Næste skridt er at brugeren skal vælge et bestemt tidspunkt at booke på den valgte dag.
+$timeslot1 = "09:00";
+$timeslot2 = "11:00";
+$timeslot3 = "13:00";
+
+$timeslot1_booked = 0;
+$timeslot2_booked = 0;
+$timeslot3_booked = 0;
+
+
+$sql_booking = "SELECT * FROM bookingsList WHERE dato='$dato'";
 $res_booking = mysqli_query($mySQL, $sql_booking) or die(mysqli_error($mySQL));
 
 if (mysqli_num_rows($res_booking) > 0 ) {
  while($row = $res_booking->fetch_assoc()) {
-    $timeslot1_booked = $row["timeslot1"] == "1";
-    $timeslot2_booked = $row["timeslot2"] == "1";
-    $timeslot3_booked = $row["timeslot3"] == "1";
+    $timeslot1_booked = $row["timeslot"] == "1";
+    $timeslot2_booked = $row["timeslot"] == "2";
+    $timeslot3_booked = $row["timeslot"] == "3";
   }
   
 } 
-    if($timeslot1_booked == false){ 
+    if($timeslot1_booked == 0){ 
         echo "<a class='ledigtid' href='kalender.php?date=$dato&tid=$timeslot1'>$timeslot1</a>";
+            $_SESSION['tid'] = $timeslot1;
     } 
-        if($timeslot2_booked == false){
+        if($timeslot2_booked == 0){
             echo "<a class='ledigtid' href='kalender.php?date=$dato&tid=$timeslot2'>$timeslot2</a>";
+            $_SESSION['tid'] = $timeslot2;
     } 
-        if($timeslot3_booked == false){
+        if($timeslot3_booked == 0){
             echo "<a class='ledigtid' href='kalender.php?date=$dato&tid=$timeslot3'>$timeslot3</a>";
+            $_SESSION['tid'] = $timeslot3;
     }
+    if(isset($_REQUEST["tid"])){
+    $_SESSION['tid'] = $_REQUEST["tid"];
+    $tid = $_SESSION['tid'];}
 }
 
 
 
-if(isset($_REQUEST["tid"])){
-    $tid = $_REQUEST["tid"];
-} 
 
 
 
 
 ?>
+<form class="form-bestilling" action="booking-backend.php" name="booking" method="post">
+                <label for="name">Navn</label>
+                <input type="text" name="name" <?php if(isset($_SESSION['firstname'])!=""){ 
+                    echo " value='".$_SESSION['firstname']."'"; }?>
+                ><br>
+
+                <label for="email">Email</label>
+                <input type="text" name="email" <?php if(isset($_SESSION['email'])!=""){ 
+                    echo " value='".$_SESSION['email']."'"; }?>><br>
+
+                <label for="number">Telefon nummer</label>
+                <input type="number" name="number" <?php if(isset($_SESSION['number'])!=""){ 
+                    echo " value='".$_SESSION['number']."'"; }?>><br>
+  <input type="submit" value="Submit">
+</form> 
 

@@ -21,7 +21,7 @@
         </ul>
         </div>
         <?php 
-            if(isset($_SESSION['id'])) {
+            if(isset($_SESSION['number'])) {
               echo "<div class='nav-button'><a href='profil.php' class='log-ind'>Min side</a><button class='default-button'>Bestil tid        <i class='fa-solid fa-arrow-right'></i></button></div>";
               echo "<li><a href='logout.php'>Log ud</a></li>'";
             } else {
