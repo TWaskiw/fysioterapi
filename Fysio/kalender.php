@@ -67,9 +67,9 @@ function kalender($month, $year) {
 
         // Vi printer enten dagens dato eller en normal celle.
         if($dateToday==$date){
-            $kalender.= "<td><a class='today' href='booking-backend.php?date=$date'>$currentDay</a></td>";
+            $kalender.= "<td><a class='today' href='kalender.php?date=$date'>$currentDay</a></td>";
         } else {
-            $kalender.= "<td><a class='nottoday' href='booking-backend.php?date=$date'>$currentDay</a></td>";
+            $kalender.= "<td><a class='nottoday' href='kalender.php?date=$date'>$currentDay</a></td>";
         }
 
         $kalender.= "</td>";
@@ -89,8 +89,6 @@ function kalender($month, $year) {
     $kalender.="</tr></table>";
 
     echo $kalender;
-
-
 }
 ?>
 
@@ -102,3 +100,53 @@ $year =  $dateComponents['year'];
 
     echo  kalender($month, $year);
 ?>
+
+
+<?php 
+// Næste skridt er at brugeren skal vælge et bestemt tidspunkt at booke på den valgte dag.
+$timeslot1 = "09:00";
+$timeslot2 = "11:00";
+$timeslot3 = "13:00";
+
+$timeslot1_booked = false;
+$timeslot2_booked = false;
+$timeslot3_booked = false;
+
+if(isset($_REQUEST["date"])){
+    $_SESSION['dato'] = $_REQUEST["date"];
+$dato = $_SESSION['dato'];
+echo $dato;
+
+$sql_booking = "SELECT * FROM bookings WHERE dato='$dato'";
+$res_booking = mysqli_query($mySQL, $sql_booking) or die(mysqli_error($mySQL));
+
+if (mysqli_num_rows($res_booking) > 0 ) {
+ while($row = $res_booking->fetch_assoc()) {
+    $timeslot1_booked = $row["timeslot1"] == "1";
+    $timeslot2_booked = $row["timeslot2"] == "1";
+    $timeslot3_booked = $row["timeslot3"] == "1";
+  }
+  
+} 
+    if($timeslot1_booked == false){ 
+        echo "<a class='ledigtid' href='kalender.php?date=$dato&tid=$timeslot1'>$timeslot1</a>";
+    } 
+        if($timeslot2_booked == false){
+            echo "<a class='ledigtid' href='kalender.php?date=$dato&tid=$timeslot2'>$timeslot2</a>";
+    } 
+        if($timeslot3_booked == false){
+            echo "<a class='ledigtid' href='kalender.php?date=$dato&tid=$timeslot3'>$timeslot3</a>";
+    }
+}
+
+
+
+if(isset($_REQUEST["tid"])){
+    $tid = $_REQUEST["tid"];
+} 
+
+
+
+
+?>
+

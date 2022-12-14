@@ -19,9 +19,12 @@ session_start();
   </section>
 </main>
 
+<div class="fcontainer">
+    <h1>Page<span>splitter</span></h1>
+</div>
+
 <?php
   include_once 'behandlinger.php';
-  include_once 'ommig.php';
   include_once 'contact.php';
   include_once 'testimonials.php'; 
   include_once 'footer.php'; 

@@ -5,8 +5,9 @@
 
 <section class="behandlinger">
 
-<div class="contact-heading">
-        <h2>Behandlinger</h2>
+<div class="header-behandlinger">
+    <h2>Behandlinger</h2>
+    <p>Læs mere om de forskellige behandlinger jeg kan tilbyde</p>
 </div>
 
 <div class="wrapper">
