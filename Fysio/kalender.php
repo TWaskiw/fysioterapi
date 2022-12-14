@@ -67,7 +67,7 @@ function kalender($month, $year) {
 
         // Vi printer enten dagens dato eller en normal celle.
         if($dateToday==$date){
-            $kalender.= "<td><a class='today' href='kalender.php?date=$date'>$currentDay</a></td>";
+            $kalender.= "<td><a class='today' value='tider' onclick='callAPI('ledigetider', '$date')' href='kalender.php?date=$date'>$currentDay</a></td>";
         } else {
             $kalender.= "<td><a class='nottoday' href='kalender.php?date=$date'>$currentDay</a></td>";
         }
@@ -109,13 +109,15 @@ $dato = $_SESSION['dato'];
 echo $dato;
 
 // Næste skridt er at brugeren skal vælge et bestemt tidspunkt at booke på den valgte dag.
+$ledigetider = "<div class='ledigetider'>";
+
 $timeslot1 = "09:00";
 $timeslot2 = "11:00";
 $timeslot3 = "13:00";
 
-$timeslot1_booked = 0;
-$timeslot2_booked = 0;
-$timeslot3_booked = 0;
+$timeslot1_booked = false;
+$timeslot2_booked = false;
+$timeslot3_booked = false;
 
 
 $sql_booking = "SELECT * FROM bookingsList WHERE dato='$dato'";
@@ -123,32 +125,32 @@ $res_booking = mysqli_query($mySQL, $sql_booking) or die(mysqli_error($mySQL));
 
 if (mysqli_num_rows($res_booking) > 0 ) {
  while($row = $res_booking->fetch_assoc()) {
-    $timeslot1_booked = $row["timeslot"] == "1";
-    $timeslot2_booked = $row["timeslot"] == "2";
-    $timeslot3_booked = $row["timeslot"] == "3";
+    $timeslot1_booked = $timeslot1_booked || $row["timeslot"] == $timeslot1;
+    $timeslot2_booked = $timeslot2_booked || $row["timeslot"] == $timeslot2;
+    $timeslot3_booked = $timeslot3_booked || $row["timeslot"] == $timeslot3;
   }
   
 } 
+$ledigetider = "<div class='ledigetider'>";
     if($timeslot1_booked == 0){ 
-        echo "<a class='ledigtid' href='kalender.php?date=$dato&tid=$timeslot1'>$timeslot1</a>";
+        $ledigetider.="<a class='ledigtid' href='kalender.php?date=$dato&tid=$timeslot1'>$timeslot1</a>";
             $_SESSION['tid'] = $timeslot1;
     } 
         if($timeslot2_booked == 0){
-            echo "<a class='ledigtid' href='kalender.php?date=$dato&tid=$timeslot2'>$timeslot2</a>";
+        $ledigetider.="<a class='ledigtid' href='kalender.php?date=$dato&tid=$timeslot2'>$timeslot2</a>";
             $_SESSION['tid'] = $timeslot2;
     } 
         if($timeslot3_booked == 0){
-            echo "<a class='ledigtid' href='kalender.php?date=$dato&tid=$timeslot3'>$timeslot3</a>";
+        $ledigetider.="<a class='ledigtid' href='kalender.php?date=$dato&tid=$timeslot3'>$timeslot3</a>";
             $_SESSION['tid'] = $timeslot3;
     }
     if(isset($_REQUEST["tid"])){
     $_SESSION['tid'] = $_REQUEST["tid"];
     $tid = $_SESSION['tid'];}
+    echo $ledigetider;
 }
-
-
-
-
+$ledigetider = "</div>";
+echo $ledigetider;
 
 
 

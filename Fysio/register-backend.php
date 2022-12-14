@@ -2,8 +2,10 @@
     include("mysql.php");
     session_start();
 
+
     // Vi tjekker først at brugeren har trykket på "Tilmeld" (submit-knappen), før vi kører koden der opretter brugeren i databasen.
     if(isset($_POST['submit'])) {
+        include_once("functions/functions.php");
 
         // Her tager vi alle indtastede input-værdier vha. $_REQUEST og sætter det lig med en variabel vi vil bruge i koden.
         $firstname = $_REQUEST["firstname"];
@@ -34,10 +36,11 @@
 
         // Vi begynder at kigge den indtastede information igennem, for at sikre brugeren ikke har begået fejl - og vi undgår fejl i databasen.
         // Først tjekker vi om alle felter er tomme
-        if(empty($firstname) || empty($lastname) || empty($number) || empty($email) || empty($gender) || empty($password)){
+        if(emptySignUp($firstname, $lastname, $number, $email, $gender, $password) == true) {
             header('location: register.php?error=emptyField');
             exit();
         }
+        
         
         // Så tjekker vi om der var nogen brugere allerede registreret med dette telefonnummer - hvis der ingen er, kører koden videre.
         if (mysqli_num_rows($res_user) > 0 ) {
