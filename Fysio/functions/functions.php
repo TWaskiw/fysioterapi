@@ -14,6 +14,18 @@ function emptySignUp($firstname, $lastname, $number, $email, $gender, $password)
 
 
 
+function emptyBooking($dato, $tid, $name, $email, $number) {
+    $result = "";
+    if (empty($dato) || empty($tid) || empty($name) || empty($email) || empty($number)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+
+
+
 
 
 ?>

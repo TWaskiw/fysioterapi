@@ -66,10 +66,13 @@ function kalender($month, $year) {
         $date = "$year-$month-$currentDayPadded";
 
         // Vi printer enten dagens dato eller en normal celle.
+         
         if($dateToday==$date){
             $kalender.= "<td><a class='today' value='tider' onclick='callAPI('ledigetider', '$date')' href='kalender.php?date=$date'>$currentDay</a></td>";
-        } else {
+        } else if ($date>$dateToday) {
             $kalender.= "<td><a class='nottoday' href='kalender.php?date=$date'>$currentDay</a></td>";
+        } else {
+            $kalender.= "<td class='daypassed'>$currentDay</td>";
         }
 
         $kalender.= "</td>";
@@ -103,10 +106,17 @@ $year =  $dateComponents['year'];
 
 
 <?php 
+
+
 if(isset($_REQUEST["date"])){
     $_SESSION['dato'] = $_REQUEST["date"];
 $dato = $_SESSION['dato'];
 echo $dato;
+
+if($dato < date('Y-m-d')) {
+    header('location: kalender.php?error=ugyldigDato');
+    exit();
+}
 
 // Næste skridt er at brugeren skal vælge et bestemt tidspunkt at booke på den valgte dag.
 $ledigetider = "<div class='ledigetider'>";
