@@ -21,7 +21,7 @@
         $row = $result->fetch_assoc();
 
         $hashedPassword = $row["password"];
-        $id = $row["id"];
+        $number = $row["number"];
         $checkPassword = password_verify($password, $hashedPassword);
 
 
@@ -29,7 +29,7 @@
             header('location: login.php?error=wrongLogin');
             exit();
         } else if ($checkPassword === true) {
-            $_SESSION['id'] = $id;
+            $_SESSION['number'] = $number;
             header('location: index.php');
         } 
 
