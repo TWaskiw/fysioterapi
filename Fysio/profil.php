@@ -9,6 +9,7 @@
     }
     $number = $_SESSION['number'];
 
+// Vi kører funktionen CallMySQL der henter data fra databasen ud fra $number, altså den bruger der er logget ind. 
     function CallMySQL($sqlQuery) {
         global $mySQL;
 
@@ -26,6 +27,7 @@
         return json_encode($json);
     }
 
+    // Vi tager fat i vores Bookinglist class, der indhenter bookinger fra databasen.
     $bookings = new BookingList($number);
         $sql = "SELECT * FROM userTable";
         $data = json_decode(CallMySQL($sql));
@@ -48,7 +50,7 @@
         }
     } 
 
-
+// Vha Class BookingList bruger vi bookings og oldbookings til at vise brugeren sine kommende- og gamle aftaler.
         echo'<div class="mineAftaler">
         <div class="kommendeAftaler">
         <h3>Mine aftaler</h3>

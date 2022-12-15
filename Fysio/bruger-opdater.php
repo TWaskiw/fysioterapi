@@ -7,6 +7,7 @@
     }
     include_once 'components/header.php';
 
+    // Vi kalder på funktionen CallMySQL for at kører en sql query så vi kan få fat i alle informationer omkring brugeren der er logget ind.
     function CallMySQL($sqlQuery) {
         global $mySQL;
 
@@ -26,6 +27,7 @@
         return json_encode($json);
     }
     
+    // Vi looper igennem dataen og sætter indformationen ind i formen, så brugeren kan se og redigerer i de ønskede ting.
         $sql = "SELECT * FROM userTable";
         $data = json_decode(CallMySQL($sql));
         foreach($data as $user){
