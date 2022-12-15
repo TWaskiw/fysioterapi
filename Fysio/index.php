@@ -24,7 +24,5 @@ session_start();
   include_once 'components/footer.php'; 
 ?>
 
-<script src="js\script.js"></script>
-
 
 

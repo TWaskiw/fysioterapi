@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Fysioterapi</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <script src="js/script.js"></script>
 </head>
 <body>
 
@@ -16,17 +15,17 @@
     <?php 
         if(isset($_SESSION['number'])) {
             echo "<li class='navlogo'><a href='index.php'><span>Mark</span>Skals</a></li>";
-            echo "<li class='item'><a href='#anchor-behandlinger'>Behandlinger</a></li>";
-            echo "<li class='item'><a href='#anchor-about'>Om mig</a></li>";
-            echo "<li class='item'><a href='#anchor-contact'>Kontakt</a></li>";
+            echo "<li class='item'><a href='index.php#anchor-behandlinger'>Behandlinger</a></li>";
+            echo "<li class='item'><a href='index.php#anchor-about'>Om mig</a></li>";
+            echo "<li class='item'><a href='index.php#anchor-contact'>Kontakt</a></li>";
             echo "<li class='item'><a href='profil.php'>Min side</a></li>";
             echo "<li class='item'><a href='logout.php'>Log ud</a></li>";
             echo "<li class='item button'><a href='kalender.php'>Bestil tid</a></li>";
         } else {
             echo "<li class='navlogo'><a href='index.php'><span>Mark</span>Skals</a></li>";
-            echo "<li class='item'><a href='#anchor-behandlinger'>Behandlinger</a></li>";
-            echo "<li class='item'><a href='#anchor-about'>Om mig</a></li>";
-            echo "<li class='item'><a href='#anchor-contact'>Kontakt</a></li>";
+            echo "<li class='item'><a href='index.php#anchor-behandlinger'>Behandlinger</a></li>";
+            echo "<li class='item'><a href='index.php#anchor-about'>Om mig</a></li>";
+            echo "<li class='item'><a href='index.php#anchor-contact'>Kontakt</a></li>";
             echo "<li class='item'><a href='login.php'>Login</a></li>";
             echo "<li class='item button'><a href='kalender.php'>Bestil tid</a></li>";
         }
