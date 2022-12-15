@@ -168,8 +168,8 @@ $ledigetider = "</div>";
 echo $ledigetider;
 
 
-
 ?>
+
 <div class="bestilling-form">
 <form class="form-bestilling" action="booking-backend.php" name="booking" method="post">
                 <label for="name">Navn</label>

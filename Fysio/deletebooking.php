@@ -8,7 +8,7 @@
 
     if (isset($_POST["button"])) {
     deleteTid($id, $number);
-    header('location: profil2.php?deleteBooking=success');
+    header('location: profil.php?deleteBooking=success');
     }
 
 

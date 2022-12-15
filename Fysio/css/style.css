@@ -387,10 +387,8 @@ nav {
 }
 
 /* Profil */
-.profilSection {
+.profil {
   margin-top: 10%;
-  display: flex;
-  justify-content: center;
 }
 
 .profilBoks {
@@ -403,6 +401,11 @@ nav {
 }
 .picInfo {
   display: flex;
+  padding: 5vh 0;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
 }
 .profilePic {
   border-radius: 50%;
@@ -418,28 +421,44 @@ nav {
 .picInfo ul {
   list-style-type: none;
 }
-.redOp {
+.redOp a {
   color: #2091f9;
   font-weight: bold;
-  float: right;
-  padding-left: 20%;
+  text-decoration: none;
+}
+
+.redOp a:hover {
+  text-decoration: underline;
+}
+
+.mineAftaler {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.kommendeAftaler,
+.gamleAftaler {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .aftaleTop {
   display: flex;
   justify-content: space-between;
   margin-bottom: 2%;
+  border: 1px solid #2091f9;
+  border-radius: 5px;
+  flex-direction: column;
+  margin: 24px;
+  padding: 24px;
 }
 .aftaleDato {
-  background-color: #2091f9;
   padding: 1%;
   border-radius: 10px;
-}
-
-.aftaleDato p {
-  color: white;
-  font-size: 13px;
-  font-weight: bold;
+  color: black;
 }
 
 .aftaleInfo {
@@ -480,6 +499,13 @@ nav {
   font-size: 13px;
   font-weight: bold;
 }
+
+.sletbookingBtn:hover {
+  color: #2091f9;
+  background-color: white;
+  border: 1px solid #2091f9;
+}
+
 /* Footer */
 footer {
   background-color: #252b42;
@@ -755,7 +781,7 @@ form button {
   background-color: #2091f9;
   border-radius: 4px;
   padding: 2%;
-  border: 1px transparent;
+  border: 1px solid transparent;
   color: white;
 }
 
@@ -1325,21 +1351,6 @@ form button {
   transform: translateX(0);
 }
 
-@media screen and (max-width: 767px) {
-  .carousel-item {
-    flex-direction: column;
-  }
-
-  .carousel-item__info {
-    width: 100%;
-    padding: 2vh 40px;
-  }
-
-  .carousel-item__image {
-    width: 100%;
-  }
-}
-
 /* STYLING KALENDER */
 .bestilling-form,
 .kalender,
@@ -1417,6 +1428,7 @@ tbody > tr > td {
     0px 8px 32px rgba(19, 10, 46, 0.07), 0px 3px 14px rgba(19, 10, 46, 0.03),
     0px 1px 3px rgba(19, 10, 46, 0.13);
   border-radius: 5px;
+  flex-direction: row;
 }
 
 .ledigtid {
@@ -1558,4 +1570,33 @@ tbody > tr > td {
 
 .hide {
   display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .carousel-item {
+    flex-direction: column;
+  }
+
+  .carousel-item__info {
+    width: 100%;
+    padding: 2vh 40px;
+  }
+
+  .carousel-item__image {
+    width: 100%;
+  }
+
+  .mineAftaler {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+
+  .picInfo {
+    flex-direction: column;
+  }
+
+  .ledigetider {
+    flex-direction: column;
+  }
 }

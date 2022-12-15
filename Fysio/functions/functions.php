@@ -36,7 +36,7 @@ function signInEmpty($number, $password) {
 
 
 
-/* Booking (kalender.php) */
+/* Booking */
 function emptyBooking($dato, $tid, $name, $email, $number) {
     $result = "";
     if (empty($dato) || empty($tid) || empty($name) || empty($email) || empty($number)) {
