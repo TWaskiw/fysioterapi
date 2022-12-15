@@ -7,16 +7,13 @@ session_start();
 <body>
     
 <main class="hero-section">
-  <section class="container">
-    <div class="hero-content">
-    <div class="hero-text">
-        <h2 class="hero-welcome-text">Fysioterapi med dig i</h2>
-        <h1 class="hero-big">FOKUS</h1>
-        <p class="hero-text-description">Jeg har over 5 års erfaring  med alt fra småskader, sportsskader massage og meget mere.</p>
-        <button class="default-button">Læs mere <i class="fa-solid fa-arrow-right"></i></button>
-      </div>
-    </div>
-  </section>
+  <div class="hero2">
+  <fieldset class="hero2-text">
+      <legend class="border-text">&nbsp; Mark Skals</legend>
+  <h1>Fysioterapi med dig i fokus</h1>
+  <p>Jeg har over 5 års erfaring  med alt fra småskader, sportsskader massage og meget mere.</p>
+    <a href="#scroll2"><button>Læs mere</button></a>
+  </fieldset></div>
 </main>
 
 <?php
