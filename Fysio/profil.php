@@ -44,7 +44,7 @@
 
         echo'<div class="mineAftaler">
         <div class="kommendeAftaler">
-        <h3>Mine Aftaler</h3>
+        <h3>Mine aftaler</h3>
                 ';
                 foreach($bookings->bookings as $b) {
                     echo '<div class="aftaleTop">';
