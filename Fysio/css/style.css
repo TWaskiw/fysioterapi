@@ -1452,3 +1452,86 @@ tbody > tr > td {
   margin: auto;
   padding: 10vh 0;
 }
+
+/* fejl page */
+#fejlside{ 
+  display: flex;
+  width: 100vw;
+  height: 92.12vh;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  background: #fff;
+  color: #252b42;
+  font-size: 96px;
+  font-weight: 600;
+  letter-spacing: -7px;
+}
+
+.fejl {
+  animation: glitch 1s linear infinite;
+}
+
+.fejlp {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+  margin-left: 2%;
+}
+
+@keyframes glitch{
+  2%,64%{
+    transform: translate(2px,0) skew(0deg);
+  }
+  4%,60%{
+    transform: translate(-2px,0) skew(0deg);
+  }
+  62%{
+    transform: translate(0,0) skew(5deg); 
+  }
+}
+
+.fejl:before,
+.fejl:after{
+  content: attr(title);
+  position: absolute;
+  left: 0;
+}
+
+.fejl:before{
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop{
+  2%,64%{
+    transform: translate(2px,-2px);
+  }
+  4%,60%{
+    transform: translate(-2px,2px);
+  }
+  62%{
+    transform: translate(13px,-1px) skew(-13deg); 
+  }
+}
+
+.fejl:after{
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom{
+  2%,64%{
+    transform: translate(-2px,0);
+  }
+  4%,60%{
+    transform: translate(-2px,0);
+  }
+  62%{
+    transform: translate(-22px,5px) skew(21deg); 
+  }
+}
