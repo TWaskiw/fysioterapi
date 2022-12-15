@@ -717,6 +717,7 @@ footer .logo > span {
   font-size: 14px;
   color: #fff;
   position: relative;
+  line-height: 40px;
 }
 
 .contact-text {
