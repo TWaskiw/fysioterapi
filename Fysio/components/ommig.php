@@ -23,7 +23,7 @@
       <div class="carousel-item__container">
       <h2 class="carousel-item__subtitle">Mark Skals </h2>
       <h1 class="carousel-item__title">Hvem er jeg?</h1>
-      <p class="carousel-item__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+      <p class="carousel-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
       <a href="#" class="carousel-item__btn">Se mere på min Linkedin</a>
         </div>
     </div>
@@ -35,7 +35,7 @@
       <div class="carousel-item__container">
       <h2 class="carousel-item__subtitle">2012-2022 </h2>
       <h1 class="carousel-item__title">Uddannelse </h1>
-      <p class="carousel-item__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+      <p class="carousel-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
     </div>
   </div>
@@ -46,7 +46,7 @@
       <div class="carousel-item__container">
       <h2 class="carousel-item__subtitle">Fritidsinterresser </h2>
       <h1 class="carousel-item__title">Fodbold siden 2004 </h1>
-      <p class="carousel-item__description">Clear Glass Window With Brown and White Wooden Frame iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+      <p class="carousel-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
     </div>
   </div>
@@ -56,7 +56,7 @@
       <div class="carousel-item__container">
       <h2 class="carousel-item__subtitle">Hvorfor? </h2>
       <h1 class="carousel-item__title">Hvorfor Fysioterapi?</h1>
-      <p class="carousel-item__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+      <p class="carousel-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
     </div>
   </div>
