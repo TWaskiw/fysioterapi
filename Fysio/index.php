@@ -1,7 +1,7 @@
  <?php 
 session_start();
     include("mysql.php");
-    include_once 'header.php'; 
+    include_once 'components/header.php'; 
 ?> 
 
 <body>
@@ -17,12 +17,14 @@ session_start();
 </main>
 
 <?php
-  include_once 'behandlinger.php';
-  include_once 'ommig.php';
-  include_once 'contact.php';
-  include_once 'testimonials.php'; 
-  include_once 'footer.php'; 
+  include_once 'components/behandlinger.php';
+  include_once 'components/ommig.php';
+  include_once 'components/contact.php';
+  include_once 'components/testimonials.php'; 
+  include_once 'components/footer.php'; 
 ?>
+
+<script src="js\script.js"></script>
 
 
 
