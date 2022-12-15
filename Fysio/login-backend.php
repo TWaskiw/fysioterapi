@@ -32,7 +32,7 @@
             exit();
         } else if ($checkPassword === true) {
             $_SESSION['number'] = $number;
-            header('location: index.php');
+            header('location: profil.php');
         } 
 
     }

@@ -47,12 +47,7 @@ function kalender($month, $year) {
         $kalender.="<td></td></div>";
     }
 
-/*     if($dayOfWeek > 0) {
-        for($k=0;$k<$dayOfWeek;$k++){
-            $kalender.="<td></td>";
-        }
-    }
- */
+
     $currentDay = 1;
     $month = str_pad($month, 2, "0", STR_PAD_LEFT);
 
