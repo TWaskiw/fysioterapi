@@ -38,10 +38,8 @@ if (mysqli_num_rows($res_bookings) > 0 ) {
 
 if ($mySQL->query($sql) === TRUE) {
     header('location: index.php?booking=success');
-    unset($_SESSION['name']);
     unset($_SESSION['dato']);
     unset($_SESSION['tid']);
-    unset($_SESSION['email']);
   } else {
     echo "Error: " . $sql . "<br>" . $mySQL->error;
   }
