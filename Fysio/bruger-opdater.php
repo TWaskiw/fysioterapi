@@ -30,8 +30,7 @@
         $data = json_decode(CallMySQL($sql));
         foreach($data as $user){
             foreach($user as $info){
-            echo '<div class="form-form-register"><h1 style="text-align:center"> Velkommen '.$info->firstname.' '.$info->lastname.'!</h1><br>
-            <p style="text-align: center">Herunder kan du rediger i dine informationer og opdatere når alt er som det skal være!</p>';
+            echo '<div class="form-form-register"><h1 style="text-align:center"> Hej '.$info->firstname.' '.$info->lastname.'</h1><br>';
             if (isset($_GET["status"])) {
                 if ($_GET["status"] == "success") {
                     echo "<p class='update_success'>Din information blev opdateret</p>";

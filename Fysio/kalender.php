@@ -28,8 +28,9 @@ function kalender($month, $year) {
 
     $kalender = "<div class='kalender'><table class='table'>";
     $kalender.="<h2>$monthName $year</h2>";
-    $kalender.= "<a href='?month=".date('m', mktime(0, 0, 0, $month-1, 1, $year))."&year=".date('Y', mktime(0, 0, 0, $month-1, 1, $year))."'>Sidste måned</a>";
-    $kalender.= "<a href='?month=".date('m', mktime(0, 0, 0, $month+1, 1, $year))."&year=".date('Y', mktime(0, 0, 0, $month+1, 1, $year))."'>Næste måned</a>";
+
+/*     $kalender.= "<a href='?month=".date('m', mktime(0, 0, 0, $month-1, 1, $year))."&year=".date('Y', mktime(0, 0, 0, $month-1, 1, $year))."'>Sidste måned</a>";
+    $kalender.= "<a href='?month=".date('m', mktime(0, 0, 0, $month+1, 1, $year))."&year=".date('Y', mktime(0, 0, 0, $month+1, 1, $year))."'>Næste måned</a>"; */
 
     // Vi laver en array med alle ugens dage
     $daysofWeek = array('Søndag','Mandag','Tirsdag','Onsdag','Torsdag','Fredag','Lørdag');
@@ -180,7 +181,7 @@ echo $ledigetider;
                 <label for="number">Telefon nummer</label>
                 <input type="number" name="number" required <?php if(isset($_SESSION['number'])!=""){ 
                     echo " value='".$_SESSION['number']."'"; }?>><br>
-  <input type="submit" value="Bekræft bestilling">
+  <input class="button-bestil" type="submit" value="Bekræft bestilling">
 </form> 
 </div>
 

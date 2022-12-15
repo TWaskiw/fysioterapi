@@ -4,18 +4,7 @@ include("mysql.php");
 include_once("functions/functions.php");
 session_start();
 
-    // Her tager vi de indtastede input-værdier ved at bruge $_REQUEST og sætter det lig med variabelen vi skal bruge i koden.
-$dato = $_SESSION['dato'];
-$tid = $_SESSION['tid'];
-$name = $_REQUEST["name"];
-$email = $_REQUEST["email"];
-$number = $_REQUEST["number"];
-
-if(emptyBooking($dato, $tid, $name, $email, $number) == true) {
-    header('location: kalender.php?error=emptyField');
-    exit();
-}
-
+    // Her tager vi de indtastede input-værdier ved at bruge $_REQUEST og $_SESSION og sætter det lig med variabelen vi skal bruge i koden.
 $dato = $_SESSION['dato'];
 $tid = $_SESSION['tid'];
 $name = $_REQUEST["name"];
