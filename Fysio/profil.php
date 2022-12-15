@@ -42,6 +42,13 @@
         </div>';
     }
 
+    if (isset($_GET["deleteBooking"])) {
+        if ($_GET["deleteBooking"] == "success") {
+            echo "<p style='text-align:center; color:green;'>Bestillingen blev aflyst!</p>";
+        }
+    } 
+
+
         echo'<div class="mineAftaler">
         <div class="kommendeAftaler">
         <h3>Mine aftaler</h3>
