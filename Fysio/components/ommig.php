@@ -3,7 +3,7 @@
         <h2 id="anchor-about">Om mig</h2>
 </div>
 
-<section class="om-mig">
+<section class="om-mig" data-aos="fade-up" data-aos-duration="1500">
 <div class="carousel">
   <div class="carousel__nav">
    <span id="moveLeft" class="carousel__arrow">

@@ -183,7 +183,7 @@ nav {
       rgba(255, 255, 255, 0) 0%,
       rgba(37, 43, 66, 0.897) 100%
     ),
-    url("/img/hero.jpg");
+    url("/Fysio/img/hero.jpg");
   background-position: center;
   filter: grayscale(30%);
   margin: 0;
@@ -1265,20 +1265,20 @@ form button {
 }
 
 .carousel-item--1 .carousel-item__image {
-  background-image: url("/img/potrait.png");
+  background-image: url("/Fysio/img/potrait.png");
   max-width: 500px;
 }
 
 .carousel-item--2 .carousel-item__image {
-  background-image: url("/img/fodbold.jpg");
+  background-image: url("/Fysio/img/fodbold.jpg");
 }
 
 .carousel-item--3 .carousel-item__image {
-  background-image: url("/img/fysioterapi.jpg");
+  background-image: url("/Fysio/img/fysioterapi.jpg");
 }
 
 .carousel-item--4 .carousel-item__image {
-  background-image: url("/img/studenterhue.png");
+  background-image: url("/Fysio/img/studenterhue.png");
   max-width: 500px;
 }
 

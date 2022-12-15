@@ -3,7 +3,7 @@
         <h2 id="anchor-contact">Kontakt</h2>
     </div>
 
-    <div class="contact-container">
+    <div class="contact-container"data-aos="fade-up" data-aos-duration="1500">
         <div class="contact-row">
             <div class="contact-column">
                 <div class="contact-widget">

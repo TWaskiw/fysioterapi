@@ -98,3 +98,6 @@ toggle.addEventListener("click", toggleMenu, false);
   }
 });
 /* Om mig slut */
+
+/* AOS Initialise */
+AOS.init();

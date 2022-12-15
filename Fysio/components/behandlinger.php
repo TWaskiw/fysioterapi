@@ -7,7 +7,7 @@
 <div class="wrapper">
   <div class="cards">
 
-    <div class=" card [ is-collapsed ] ">
+    <div class=" card [ is-collapsed ] " data-aos="fade-right" data-aos-duration="2000">
       <div class="card__inner [ js-expander ]">
         <h3>Fysioterapi</h3>
         <i class="fa-solid fa-kit-medical"></i>
@@ -21,7 +21,7 @@
     </div>
     </div>
 
-    <div class=" card [ is-collapsed ] ">
+    <div class=" card [ is-collapsed ] "data-aos="fade-left" data-aos-duration="1000">
       <div class="card__inner [ js-expander ]">
         <h3>Genoptræning</h3>
         <i class="fa-solid fa-person-walking"></i>
@@ -35,7 +35,7 @@
     </div>
     </div>
 
-    <div class=" card [ is-collapsed ] ">
+    <div class=" card [ is-collapsed ] "data-aos="fade-right" data-aos-duration="1000">
       <div class="card__inner [ js-expander ]">
         <h3>Massage</h3>
         <i class="fa-solid fa-spa"></i>
@@ -49,7 +49,7 @@
     </div>
     </div>
 
-    <div class=" card [ is-collapsed ] ">
+    <div class=" card [ is-collapsed ] "data-aos="fade-left" data-aos-duration="1000">
       <div class="card__inner [ js-expander ]">
         <h3>Andre ydelser</h3>
         <i class="fa-solid fa-hospital-user"></i>

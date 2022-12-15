@@ -54,9 +54,9 @@
         © 2022 1. Semester webudvikling EAAA. 
     </div>
     <div class="webright-right">
-        <a href="#">Vilkår</a>
-        <a href="#">Cookiepolitik</a>
-        <a href="#">Privatlivspolitik</a>
+        <a href="404.php">Vilkår</a>
+        <a href="404.php">Cookiepolitik</a>
+        <a href="404.php">Privatlivspolitik</a>
     </div>
 </div>
 </footer>
