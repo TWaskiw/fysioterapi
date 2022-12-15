@@ -132,7 +132,7 @@ $timeslot3_booked = false;
 $sql_booking = "SELECT * FROM bookingsList WHERE dato='$dato'";
 $res_booking = mysqli_query($mySQL, $sql_booking) or die(mysqli_error($mySQL));
 
-// 
+// Vi løber nu vores bookinger igennem fra databasen, og ser om nogle af bookningerne matcher med nogle af variablerne $timeslot1-2-3.
 if (mysqli_num_rows($res_booking) > 0 ) {
  while($row = $res_booking->fetch_assoc()) {
     $timeslot1_booked = $timeslot1_booked || $row["timeslot"] == $timeslot1;
@@ -141,6 +141,7 @@ if (mysqli_num_rows($res_booking) > 0 ) {
   }
   
 } 
+// Hvis ingen af tiderne matchede, og tidspunktet altså ikke er booket - (timeslot1_booked altså er 0 (false)), printer vi tiden som ledig.
 $ledigetider = "<div class='ledigetider'>";
     if($timeslot1_booked == 0){ 
         $ledigetider.="<a class='ledigtid' href='kalender.php?date=$dato&tid=$timeslot1'>$timeslot1</a>";
