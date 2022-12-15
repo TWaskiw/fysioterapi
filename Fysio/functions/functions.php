@@ -47,8 +47,12 @@ function emptyBooking($dato, $tid, $name, $email, $number) {
     return $result;
 }
 
-
-
+/* Slet aftale funktion */
+function deleteTid($id, $number) {
+    global $mySQL;
+    $sql_slet = "DELETE FROM bookingsList WHERE id=$id AND phonenumber='$number'";
+    $result = $mySQL->query($sql_slet);
+};
 
 
 

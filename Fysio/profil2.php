@@ -7,6 +7,7 @@
         header('location: login.php?error=noLogin');
         exit;
     }
+    $number = $_SESSION['number'];
 
     function CallMySQL($sqlQuery) {
         global $mySQL;
@@ -21,18 +22,11 @@
             $users[] = $row;
         }
 
-
-        $bookings = new BookingList($number);
-        var_dump($bookings);
-        /* foreach($bookings->$bookings as $b) {
-            var_dump($b);
-        } */
-       
         $json["users"] = $users;
-
         return json_encode($json);
     }
-    
+
+    $bookings = new BookingList($number);
         $sql = "SELECT * FROM userTable";
         $data = json_decode(CallMySQL($sql));
         foreach($data as $user){
@@ -48,18 +42,24 @@
         </div>
         <h3>Mine Aftaler</h3>
         <div class="mineAftaler">
-        <div class="aftaleTop">  
-        <div class="aftaleDato">
-                <p>D. 15. Dec. 2022 | Kl. 12:30</p>
-            </div>
+        <div class="kommendeAftaler"
+                ';
+                foreach($bookings->bookings as $b) {
+                    echo '<div class="aftaleTop">';
+                    echo '<div class="aftaleDato">';
+                    echo $b["dato"]; 
+                    echo '</div>';
+                    echo '</div>';
+                    echo '
+                    <form method="post" action="deletebooking.php">
+                    <button name="notbutton" type="submit" >Slet booking</button><input name="button"
+                    class="hide" value="'.$b["id"].'" /></form>
+';}
+                    echo' </div></div>
+
             <p>Hos Mark Skals</p>
             <p>Adresse: Rentemestervej 8 Odense</p>
-            </div> 
-            <div class="aftaleBot">
-                <button class="aflysTid"><i class="fa-solid fa-trash-can"></i>Aflys tid</button>
-            </div>
-        </div>
-            
+            </div>    
             </div>';
 
             }

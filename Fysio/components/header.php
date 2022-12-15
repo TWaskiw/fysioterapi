@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Fysioterapi</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
 
