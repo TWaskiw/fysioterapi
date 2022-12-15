@@ -1,8 +1,7 @@
- <?php 
+ <?php
+    session_start(); 
     include("mysql.php");
-    session_start();
     include_once 'components/header.php'; 
-
 ?> 
 
 <body>
