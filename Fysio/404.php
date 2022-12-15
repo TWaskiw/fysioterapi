@@ -8,6 +8,7 @@
 </head>
 
 <?php 
+session_start();
     include("mysql.php");
     include_once 'components/header.php'; 
 ?> 

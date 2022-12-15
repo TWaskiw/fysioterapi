@@ -1,4 +1,3 @@
-<body>
 <section class="contact">
     <div class="contact-heading">
         <h2 id="anchor-contact">Kontakt</h2>

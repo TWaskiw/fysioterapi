@@ -1,6 +1,5 @@
 <?php 
     include("mysql.php");
-    
     session_start();
     include_once 'components/header.php';
     if (isset($_SESSION['id'])) {
@@ -32,13 +31,7 @@
                     echo "<p style='text-align:center; color: red;'>Alle felter skal udfyldes</p>";
                 }
                 else if ($_GET["error"] == "wrongLogin") {
-                    echo "<p style='text-align:center; color: red;'>Forkert login, prøv igen </p>";
-                }
-                else if ($_GET["error"] == "noLogin") {
-                    echo "<p style='text-align:center; color: red;'>Du er ikke logget ind </p>";
-                }
-                else if ($_GET["error"] == "noUser") {
-                    echo "<p style='text-align:center; color: red;'>Ingen bruger fundet </p>";
+                    echo "<p style='text-align:center; color: red;'>Forkert login, prøv igen</p>";
                 }
             } 
         ?>

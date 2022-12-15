@@ -1,8 +1,3 @@
-<head>
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-</head>
-<body>
-
 <section class="behandlinger">
 
 <div class="contact-heading">
