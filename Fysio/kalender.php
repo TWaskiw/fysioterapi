@@ -3,7 +3,7 @@
 include("mysql.php");
     
 session_start();
-include_once 'header.php';
+include_once 'components/header.php';
 
 function kalender($month, $year) {
 

@@ -6,7 +6,7 @@
 <section class="behandlinger">
 
 <div class="contact-heading">
-        <h2>Behandlinger</h2>
+        <h2 id="anchor-behandlinger">Behandlinger</h2>
 </div>
 
 <div class="wrapper">

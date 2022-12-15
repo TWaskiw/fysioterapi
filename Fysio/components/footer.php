@@ -17,10 +17,10 @@
 
 <!-- some -->
 <div class="social-media">
-    <a href="#" class="fa fa-facebook"></a>
-    <a href="#" class="fa fa-instagram"></a>
-    <a href="#" class="fa fa-linkedin"></a>
-    <a href="#" class="fa fa-twitter"></a>
+    <a href="https://www.facebook.com" class="fa fa-facebook"></a>
+    <a href="https://www.instagram.com" class="fa fa-instagram"></a>
+    <a href="https://www.linkedin.com" class="fa fa-linkedin"></a>
+    <a href="https://www.twitter.com" class="fa fa-twitter"></a>
 </div>
 <!-- menu -->
 <div class="footer-container">
@@ -33,15 +33,20 @@
 
     <div class="footer-wrapper">
         <h4>Hurtig adgang</h4>
-        <a href="#">Om Mark Skals</a>
-        <a href="#">Behandling</a>
-        <a href="#">Kontakt</a>
+        <a href="#anchor-about">Om Mark Skals</a>
+        <a href="#anchor-behandlinger">Behandling</a>
+        <a href="#anchor-contact">Kontakt</a>
     </div>
 
     <div class="footer-wrapper">
         <h4>Til klienten</h4>
-        <a href="#">Min profil</a>
-        <a href="#">Bestil tid</a>
+
+    <?php 
+        if(isset($_SESSION['number'])) {
+        echo"<a href='profil.php'>Min profil</a>";
+        }
+    ?>
+        <a href="kalender.php">Bestil tid</a>
     </div>
 
     <div class="footer-wrapper">

@@ -18,7 +18,7 @@
 <body>
 
 <div class="contact-heading">
-        <h2>Om mig</h2>
+        <h2 id="anchor-about">Om mig</h2>
 </div>
 
 <section class="om-mig">

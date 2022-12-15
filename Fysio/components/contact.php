@@ -1,7 +1,7 @@
 <body>
 <section class="contact">
     <div class="contact-heading">
-        <h2>Kontakt</h2>
+        <h2 id="anchor-contact">Kontakt</h2>
     </div>
 
     <div class="contact-container">

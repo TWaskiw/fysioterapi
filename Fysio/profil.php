@@ -2,7 +2,7 @@
     include("mysql.php");
     
     session_start();
-    include_once 'header.php';
+    include_once 'components/header.php';
     if (!isset($_SESSION['number'])) {
         header('location: index.php');
     } 
@@ -56,5 +56,5 @@
     </div>
 </section>
 <?php
- include_once 'footer.php';
+ include_once 'components/footer.php';
 ?>
