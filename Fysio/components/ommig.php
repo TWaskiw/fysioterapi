@@ -54,7 +54,6 @@
       <h2 class="carousel-item__subtitle">2012-2022 </h2>
       <h1 class="carousel-item__title">Uddannelse </h1>
       <p class="carousel-item__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-      <a href="#" class="carousel-item__btn">Explore the beach</a>
         </div>
     </div>
   </div>
@@ -66,7 +65,6 @@
       <h2 class="carousel-item__subtitle">Fritidsinterresser </h2>
       <h1 class="carousel-item__title">Fodbold siden 2004 </h1>
       <p class="carousel-item__description">Clear Glass Window With Brown and White Wooden Frame iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-      <a href="#" class="carousel-item__btn">Read the article</a>
         </div>
     </div>
   </div>
@@ -77,7 +75,6 @@
       <h2 class="carousel-item__subtitle">Hvorfor? </h2>
       <h1 class="carousel-item__title">Hvorfor Fysioterapi?</h1>
       <p class="carousel-item__description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-      <a href="#" class="carousel-item__btn">Explore the palms</a>
         </div>
     </div>
   </div>

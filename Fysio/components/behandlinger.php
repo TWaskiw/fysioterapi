@@ -15,7 +15,7 @@
     <div class=" card [ is-collapsed ] ">
       <div class="card__inner [ js-expander ]">
         <h3>Fysioterapi</h3>
-        <i class="fa fa-folder-o"></i>
+        <i class="fa-solid fa-kit-medical"></i>
       </div>
       <div class="card__expander">
         <i class="fa fa-close [ js-collapser ]"></i>
@@ -29,7 +29,7 @@
     <div class=" card [ is-collapsed ] ">
       <div class="card__inner [ js-expander ]">
         <h3>Genoptræning</h3>
-        <i class="fa fa-folder-o"></i>
+        <i class="fa-solid fa-person-walking"></i>
       </div>
       <div class="card__expander">
         <i class="fa fa-close [ js-collapser ]"></i>
@@ -43,7 +43,7 @@
     <div class=" card [ is-collapsed ] ">
       <div class="card__inner [ js-expander ]">
         <h3>Massage</h3>
-        <i class="fa fa-folder-o"></i>
+        <i class="fa-solid fa-spa"></i>
       </div>
       <div class="card__expander">
         <i class="fa fa-close [ js-collapser ]"></i>
@@ -57,7 +57,7 @@
     <div class=" card [ is-collapsed ] ">
       <div class="card__inner [ js-expander ]">
         <h3>Andre ydelser</h3>
-        <i class="fa fa-folder-o"></i>
+        <i class="fa-solid fa-hospital-user"></i>
       </div>
       <div class="card__expander">
         <i class="fa fa-close [ js-collapser ]"></i>
