@@ -8,9 +8,14 @@ class BookingList {
     public function __construct($number) {
         global $mySQL;
         $sqlQuery = "SELECT * FROM bookingsList WHERE phonenumber='$number'";
-        $this->bookings = mysqli_fetch_assoc($mySQL->query($sqlQuery));
+
+        $rows = [];
+        while($row = mysqli_fetch_array($mySQL->query($sqlQuery))) {
+            $rows[] = $row;
+        }
+
+        $this->bookings = $rows;
 
     }
 
 }
-
