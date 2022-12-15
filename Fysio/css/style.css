@@ -179,7 +179,7 @@ nav {
       rgba(255, 255, 255, 0) 0%,
       rgba(37, 43, 66, 0.897) 100%
     ),
-    url("/img/mr-lee-f4RBYsY2hxA-unsplash.jpg");
+    url("/img/hero.jpg");
   background-position: center;
   filter: grayscale(30%);
   margin: 0;
@@ -602,7 +602,7 @@ footer .logo > span {
 
 /* Kontakt */
 .contact {
-  padding-bottom: 2rem;
+  padding-bottom: 6rem;
   background-color: #fafafa;
   margin: 0 auto;
 }
@@ -611,7 +611,7 @@ footer .logo > span {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3rem;
+  padding: 5rem;
 }
 
 .contact-heading h2 {
@@ -824,6 +824,7 @@ form button {
   background-color: #fff;
   color: #252b42;
   line-height: 1.5;
+  margin-bottom: 5rem;
 }
 
 .slider {
@@ -963,6 +964,7 @@ form button {
 
 .behandlinger {
   background-color: #fafafa;
+  padding-bottom: 5rem;
 }
 
 .wrapper {
@@ -997,7 +999,7 @@ form button {
 }
 .card__inner {
   width: 100%;
-  padding: 40px;
+  padding: 60px 40px;
   position: relative;
   cursor: pointer;
   background-color: #fff;
@@ -1010,10 +1012,11 @@ form button {
 .card__inner:after {
   transition: all 0.3s ease-in-out;
 }
-.card__inner .fa {
+.card__inner i {
   width: 100%;
   margin-top: 0.25em;
   color: #2091f9;
+  font-size: 36px;
 }
 
 .card__inner h3 {
@@ -1146,7 +1149,7 @@ form button {
   -webkit-justify-content: center;
   align-items: center;
   -webkit-align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 6rem;
 }
 
 .carousel {
@@ -1232,23 +1235,21 @@ form button {
 }
 
 .carousel-item--1 .carousel-item__image {
-  background-image: url("/img/img1.avif");
+  background-image: url("/img/potrait.png");
+  max-width: 500px;
 }
 
 .carousel-item--2 .carousel-item__image {
-  background-image: url("https://images.pexels.com/photos/921294/pexels-photo-921294.png?auto=compress&cs=tinysrgb&h=750&w=1260");
+  background-image: url("/img/fodbold.jpg");
 }
 
 .carousel-item--3 .carousel-item__image {
-  background-image: url("https://images.pexels.com/photos/92733/pexels-photo-92733.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+  background-image: url("/img/fysioterapi.jpg");
 }
 
 .carousel-item--4 .carousel-item__image {
-  background-image: url("https://images.pexels.com/photos/1008732/pexels-photo-1008732.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
-}
-
-.carousel-item--5 .carousel-item__image {
-  background-image: url("https://images.pexels.com/photos/1029614/pexels-photo-1029614.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-image: url("/img/studenterhue.png");
+  max-width: 500px;
 }
 
 .carousel-item__btn {
