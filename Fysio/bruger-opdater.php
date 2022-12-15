@@ -5,7 +5,7 @@
         header('location: login.php?error=noLogin');
         exit;
     }
-    include_once 'header.php';
+    include_once 'components/header.php';
 
     function CallMySQL($sqlQuery) {
         global $mySQL;
@@ -50,5 +50,5 @@
      }
 
      
-          include_once 'footer.php';
+          include_once 'components/footer.php';
 ?>

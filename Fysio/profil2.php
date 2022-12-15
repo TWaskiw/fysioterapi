@@ -1,11 +1,12 @@
 <?php
     include("mysql.php");
     session_start();
+    include_once 'components/header.php';
+    include_once 'model/bookinglist.php';
         if(!isset($_SESSION['number'])) {
         header('location: login.php?error=noLogin');
         exit;
     }
-    include_once 'header.php';
 
     function CallMySQL($sqlQuery) {
         global $mySQL;
@@ -19,6 +20,13 @@
         while($row = $result->fetch_object()){
             $users[] = $row;
         }
+
+
+        $bookings = new BookingList($number);
+        var_dump($bookings);
+        /* foreach($bookings->$bookings as $b) {
+            var_dump($b);
+        } */
        
         $json["users"] = $users;
 
@@ -58,5 +66,5 @@
         }
 
      
-          include_once 'footer.php';
+          include_once 'components/footer.php';
 ?>

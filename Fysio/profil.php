@@ -1,6 +1,5 @@
 <?php 
     include("mysql.php");
-    
     session_start();
     include_once 'components/header.php';
     if (!isset($_SESSION['number'])) {
