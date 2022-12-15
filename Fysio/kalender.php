@@ -123,18 +123,21 @@ if($dato < date('Y-m-d')) {
 // Næste skridt er at brugeren skal vælge et bestemt tidspunkt at booke på den valgte dag.
 $ledigetider = "<div class='ledigetider'>";
 
+// Vi sætter alle tider til en variabel, så vi har noget at sammenligne med, når vi tjekker hvilke der allerede er booket i backenden.
 $timeslot1 = "09:00";
 $timeslot2 = "11:00";
 $timeslot3 = "13:00";
 
+// Dette er variablerne vi vil bruge til at printe en evt ledig tid. Dem sætter vi lig med false til at starte med.
 $timeslot1_booked = false;
 $timeslot2_booked = false;
 $timeslot3_booked = false;
 
-
+// Nu leder vi i databasen efter bookinger med den dato, som brugeren har trykket på.
 $sql_booking = "SELECT * FROM bookingsList WHERE dato='$dato'";
 $res_booking = mysqli_query($mySQL, $sql_booking) or die(mysqli_error($mySQL));
 
+// 
 if (mysqli_num_rows($res_booking) > 0 ) {
  while($row = $res_booking->fetch_assoc()) {
     $timeslot1_booked = $timeslot1_booked || $row["timeslot"] == $timeslot1;
