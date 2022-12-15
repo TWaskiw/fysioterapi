@@ -13,21 +13,6 @@ body {
   text-decoration: none;
 }
 
-.hero-section {
-  height: 100vh;
-  background-color: #e9f5ff;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  color: white;
-}
-
-.container {
-  width: 90%;
-  margin: 0 auto;
-}
-
 /* NAV */
 /* Basic styling */
 * {
@@ -184,34 +169,85 @@ a {
 }
 /* NAV */
 
-.hero-text {
-  width: 50%;
-  position: absolute;
-  bottom: 20%;
-  right: 25%;
-  text-align: right;
-}
+/* HERO */
 
-.hero-welcome-text {
+.hero2 {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0)0%, rgba(37, 43, 66, 0.897)100%), url("/img/mr-lee-f4RBYsY2hxA-unsplash.jpg");
+  background-position: center;
+  filter: grayscale(30%);
   margin: 0;
   padding: 0;
-  font-size: 34px;
-  margin-bottom: -10px;
-  color: #000000;
+  overflow: hidden;
+}
+.border-text {
+  width: 160px;
+  text-transform: uppercase;
+  z-index: 1;
+  font-size: 18px;
+  letter-spacing: 1.8px;
+  color: #2091f9;
+  text-align: left;
+  overflow: hidden;
 }
 
-.hero-big {
-  font-size: 100px;
-  margin: 0;
-  padding: 0;
-  color: #000000;
+.hero2-text {
+  text-align: left;
+  z-index: 0;
+  width: 35%;
+  top: 35%;
+  left: 5%;
+  letter-spacing: 1.8px;
+  position: relative;
+  border: solid #272D47 2px;
+  border-radius: 4px;
+  padding-left: 40px;
+  padding-right: 30px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.hero2-text p {
+  margin: 0px;
+  width: 90%;
+  color: #fff;
+}
+.hero2-text h1 {
+  font-size: 52px;
+  letter-spacing: 4px;
+  color: #fff;
+}
+.hero2-text button {
+  position: relative;
+  background-color: #2091f9;
+  border-radius: 4px;
+  margin-left: 0;
+  padding: 12px 30px;
+  bottom: -62px;
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+.hero2-text button:hover {
+  color: white;
+  cursor: pointer;
+  background: #186bb9;
+}
+.sticky {
+  position: fixed;
+  bottom: 0;
 }
 
-.hero-text-description {
-  margin: 0;
-  padding-bottom: 20px;
-  color: #737373;
+@media screen and (max-width: 601px) {
+  .hero2-text h1 {
+    font-size: 40px;
+  }
 }
+
+/* HERO END */
 
 .default-button {
   text-decoration: none;
@@ -765,7 +801,7 @@ form button {
 
 /*-----Testimonial-------*/
 .testimonials {
-  height: 350px;
+  height: 500px;
   background-color: #fff;
   color: #252b42;
   line-height: 1.5;
