@@ -21,11 +21,11 @@ $number = $_REQUEST["number"];
 
 // Inden vi godkender bestillingen, går vi ind og tjekker igen om tiden allerede er bestilt. En sikkerhedsforanstaltning HVIS en anden bruger, skulle have bokket et par sekunder før f.eks.
 $sql_time = "SELECT * FROM bookingsList WHERE dato='$dato' AND timeslot='$tid'";
-$res_user = mysqli_query($mySQL, $sql_time) or die(mysqli_error($mySQL));
+$res_bookings = mysqli_query($mySQL, $sql_time) or die(mysqli_error($mySQL));
 
-// Så tjekker vi om der var nogen brugere allerede registreret med dette telefonnummer - hvis der ingen er, kører koden videre.
-if (mysqli_num_rows($res_user) > 0 ) {
-    header('location: kalender.php?error=numberTaken');
+// Hvis tiden stadig er ledig, lader vi den fortsætte bookingen. Men hvis den ér blevet booket, går vi tilbage til kalender.php med en fejlmeddelelse. 
+if (mysqli_num_rows($res_bookings) > 0 ) {
+    header('location: kalender.php?error=unavailableTime');
     exit();
 }
 

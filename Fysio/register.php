@@ -1,21 +1,16 @@
 <?php 
     include("mysql.php");
     session_start();
-    include_once 'header.php';
+    include_once 'components/header.php'; 
     if(isset($_SESSION['id'])) {
     header('location: welcome.php?status=loggedin');
     exit; 
     }
 
-
 ?>
 
 <html>
 <body>
-    <?php
-    include_once 'header.php';
-    ?>
-
     <div class="form-form-register">
     <form class="form-register" action="register-backend.php" name="register" method="post">
     <div class="contact-heading">
@@ -83,5 +78,5 @@
     </div>
 </form>
 <?php  
-include_once 'footer.php';
+include_once 'components/footer.php'; 
 ?>

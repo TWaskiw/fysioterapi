@@ -35,17 +35,8 @@
                 if ($_GET["status"] == "success") {
                     echo "<p class='update_success'>Din information blev opdateret</p>";
                 }
-                else if ($_GET["status"] == "fail") {
-                    echo "<p class='update_fail'>Noget gik galt, prøv igen</p>";
-                }
                 else if ($_GET["status"] == "fail_empty") {
-                    echo "<p class='update_fail'>Opdatering gik ikke igennem. Husk at udfylde alle felter</p>";
-                }
-                else if ($_GET["status"] == "age_fail") {
-                    echo "<p class='update_fail'>Vi vil alle være unge for evigt, men så ung kan man desværre ikke være - prøv igen!</p>";
-                }
-                else if ($_GET["status"] == "loggedin") {
-                    echo "<p class='loggedin'>Hovsa, du har allerede en bruger - ser her!</p>";
+                    echo "<p class='update_fail'>Udfyld alle felter</p>";
                 }
             }
         

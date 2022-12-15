@@ -40,8 +40,7 @@
             header('location: register.php?error=emptyField');
             exit();
         }
-        
-        
+    
         // Så tjekker vi om der var nogen brugere allerede registreret med dette telefonnummer - hvis der ingen er, kører koden videre.
         if (mysqli_num_rows($res_user) > 0 ) {
             $_SESSION['number'] = "";
@@ -50,11 +49,10 @@
         }
         
         // Her tjekker vi om de to kodeord stemmer overens - hvis det ikke gør, sender vi brugeren tilbage med valuen wrongPassword, som vi kan bruge til at give fejlmeddelse. 
-        if($password !== $passwordRepeat){
+        if(checkPasswordRepeat($password, $passwordRepeat) == true) {
             header('location: register.php?error=wrongPassword');
             exit();
         }
-
         // Nu har vi tjekket for de fejl vi ville, og hvis der ingen fejl er - opretter vi dem i databasen.
          else {
             // Vi bruger SQL statement INSERT til at indsætte brugeren indtastede VALUES i databasen (table userTable)
