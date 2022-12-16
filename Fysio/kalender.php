@@ -65,7 +65,7 @@ function kalender($month, $year) {
          
         if($dateToday==$date){
             $kalender.= "<td><a class='today' value='tider' onclick='callAPI('ledigetider', '$date')' href='kalender.php?date=$date'>$currentDay</a></td>";
-        } else if ($date>$dateToday) {
+        } else if ($date>$dateToday) { 
             $kalender.= "<td><a class='nottoday' href='kalender.php?date=$date'>$currentDay</a></td>";
         } else {
             $kalender.= "<td class='daypassed'>$currentDay</td>";
@@ -97,7 +97,7 @@ $dateComponents = getdate();
 $month = $dateComponents['mon'];
 $year =  $dateComponents['year'];
 
-    echo  kalender($month, $year);
+echo  kalender($month, $year);
 ?>
 
 
